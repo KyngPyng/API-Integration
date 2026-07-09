@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Spaceflight Analytics Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.js CDN for data visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>🌌 Spaceflight Data Engine</h1>
+            <p class="subtitle">Live API Orchestration, Metric Aggregation & Responsive Analytics</p>
+        </header>
+
+        <!-- Dashboard Control Station -->
+        <section class="control-panel">
+            <button id="fetch-btn">Sync Live Dataset</button>
+            
+            <div class="filter-group">
+                <input type="text" id="search-input" placeholder="Filter articles by title..." disabled>
+                <select id="source-filter" disabled>
+                    <option value="all">All News Sources</option>
+                </select>
+            </div>
+
+            <div class="toggle-group">
+                <button id="toggle-list-btn" class="view-toggle active">List View</button>
+                <button id="toggle-chart-btn" class="view-toggle">Analytics View</button>
+            </div>
+        </section>
+
+        <!-- Main Display Grid -->
+        <main class="dashboard-grid">
+            <!-- Status/Loading Block -->
+            <div id="status-message" class="status-card">
+                <p>Initialize synchronization to populate data fields.</p>
+            </div>
+
+            <!-- Content Area: List View -->
+            <section id="list-view" class="view-section">
+                <div id="news-container" class="news-flex"></div>
+            </section>
+
+            <!-- Content Area: Analytics View -->
+            <section id="chart-view" class="view-section hidden">
+                <div class="chart-container">
+                    <canvas id="metricsChart"></canvas>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

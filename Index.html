@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Interactive Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-grid">
+        <!-- Main Core Feed Section -->
+        <main class="main-content">
+            <h1>🌌 Spaceflight News Command</h1>
+            <p class="subtitle">Real-time asynchronous feed processing & data filtering</p>
+            
+            <!-- Controls Module -->
+            <div class="controls-row">
+                <input type="text" id="search-input" placeholder="🔍 Filter articles by title or source..." disabled>
+                <button id="refresh-btn">Sync Feed Now</button>
+            </div>
+
+            <!-- Auto-Sync Notification Banner -->
+            <div id="status-banner" class="banner">Auto-syncing data in background...</div>
+
+            <!-- Dynamic Target Container for Reusable Component Generator -->
+            <div id="news-feed-container">
+                <div class="initial-placeholder">Initializing network connection data sync...</div>
+            </div>
+        </main>
+
+        <!-- Simulated Chatbot / Automation Assistant Panel -->
+        <aside class="sidebar-chat">
+            <h3>🤖 DarkSide Mission Control AI</h3>
+            <p class="panel-desc">Simulated telemetry automated helper engine</p>
+            
+            <div id="chat-output-display" class="chat-display">
+                <p class="bot-msg"><strong>AI:</strong> Systems operational. Awaiting command queries...</p>
+            </div>
+
+            <div class="chat-triggers">
+                <button class="trigger-chip" data-reply="Telemetry status checks nominal. Core data stream sync running every 60 seconds. All connection ports secure.">/checkStatus</button>
+                <button class="trigger-chip" data-reply="API Data Framework: Target URL resolves to Spaceflight News v4 structure mapping JSON objects in real-time.">/apiInfo</button>
+                <button class="trigger-chip" data-reply="Data Filter Module initialized. Standard regex matching handles dynamic card hiding without page reloads.">/filterHelp</button>
+            </div>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
